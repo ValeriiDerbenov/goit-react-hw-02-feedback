@@ -1,7 +1,10 @@
-export const Section = ({title}) => {
+import { ButtonPart } from "./Section.styled"
+
+export const Section = ({title, children}) => {
 	return (
-		<div>
+		<ButtonPart>
 			<h1>{title}</h1>
-		</div>
+			{children}
+		</ButtonPart>
 	)
 }
