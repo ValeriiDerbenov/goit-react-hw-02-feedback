@@ -1,24 +1,26 @@
 // import { PropTypes } from "react";
 import PropTypes from 'prop-types';
+import { ButtonWrapper } from './FeedbackOptions.styled';
 
 export const FeedbackOptions =({onClick, feedbackOptions}) => {
 	return (
-		<div>
-			{Object.keys(feedbackOptions).map((key, ind) => {
+		<ButtonWrapper>
+			{Object.keys(feedbackOptions).map((key, index) => {
+				console.log('object :>> ', index);
 				return(
 					<button
 					className="optionButton"
-					key={ind}
+					key={index}
 					onClick={() => onClick(key)}
-					color={key}
-					size="large"
-					variant="contained"
+					// color={key}
+					// size="large"
+					// variant="contained"
 						>
 							{key}
 					</button>
 				);
 			})}
-		</div>
+		</ButtonWrapper>
 	);
 };
 
