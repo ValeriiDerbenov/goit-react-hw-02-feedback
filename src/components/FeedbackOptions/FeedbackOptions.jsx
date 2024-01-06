@@ -6,7 +6,7 @@ export const FeedbackOptions =({onClick, feedbackOptions}) => {
 	return (
 		<ButtonWrapper>
 			{Object.keys(feedbackOptions).map((key, index) => {
-				console.log('object :>> ', index);
+				// console.log('object :>> ', index);
 				return(
 					<button
 					className="optionButton"
