@@ -1,4 +1,5 @@
 import { Box, Grid } from "./Statistics.styled"
+import PropTypes from 'prop-types';
 
 export const Statistics = ({title, good, neutral, bad, total, positivePercentage}) => {
 
@@ -17,3 +18,11 @@ export const Statistics = ({title, good, neutral, bad, total, positivePercentage
 		</Box>
 	)
 }
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};

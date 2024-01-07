@@ -29,21 +29,24 @@ export class App extends Component {
 
   render()
   {return (
-    <Section title="Please leave feedback">
-      <FeedbackOptions
-        onClick={this.onClick}
-        feedbackOptions={this.state}>
-      </FeedbackOptions>
-      {this.countTotalFeedback() !== 0 ? (<Statistics 
-      title="Statistics" 
-      feedbackOptions={this.state}
-      good={this.state.good}
-      neutral={this.state.neutral}
-      bad={this.state.bad}
-      total={this.countTotalFeedback()}
-      positivePercentage={this.countPositiveFeedbackPercentage(this.state.good)}
-      > </Statistics>) : (<Notification message="There is no feedback!" />)}
-    </Section>
+    <div>
+      <Section title="Please leave feedback">
+        <FeedbackOptions
+          onClick={this.onClick}
+          feedbackOptions={this.state}>
+        </FeedbackOptions>
+      </Section>
+      <Section title="Statistics">
+        {this.countTotalFeedback() !== 0 ? (<Statistics      
+        feedbackOptions={this.state}
+        good={this.state.good}
+        neutral={this.state.neutral}
+        bad={this.state.bad}
+        total={this.countTotalFeedback()}
+        positivePercentage={this.countPositiveFeedbackPercentage(this.state.good)}
+        > </Statistics>) : (<Notification message="There is no feedback!" />)}   
+      </Section>
+    </div>
       
   );}
 };

@@ -11,11 +11,7 @@ export const FeedbackOptions =({onClick, feedbackOptions}) => {
 					<button
 					className="optionButton"
 					key={index}
-					onClick={() => onClick(key)}
-					// color={key}
-					// size="large"
-					// variant="contained"
-						>
+					onClick={() => onClick(key)}>
 							{key}
 					</button>
 				);
